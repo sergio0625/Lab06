@@ -1,19 +1,18 @@
 package Hilos;
 
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class Main {
-public static void main(String[] args) {
-    metods metodos= new metods();
-    metodos.setVisible(true);
+import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
 
-    try {
-            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-        } catch (UnsupportedLookAndFeelException | ClassNotFoundException 
-                | InstantiationException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-}
-    
+public class Main {
+public static void main(String[] args) throws UnsupportedLookAndFeelException {
+    FlatCarbonIJTheme.setup();
+    UIManager.put("Button.arc", 999);
+    metods metodos= new metods();
+
+    SwingUtilities.updateComponentTreeUI(metodos);
+    metodos.setVisible(true);
+    }
 }

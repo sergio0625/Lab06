@@ -9,17 +9,19 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import java.awt.Graphics;
 
+
 public class metods extends JFrame  {
     private JButton Boton_D = new JButton("DADOS");
     private JButton Boton_R= new JButton("RULETA");
-    private JButton Salir= new JButton("✖️");
+    private JButton Salir= new JButton("  ✖️");
 
     private Fondo_Panel Fondo= new Fondo_Panel();
     public metods(){
-        this.setBounds(0, 0, 400, 300);
+        this.setBounds(0, 0, 640, 366);
         this.setVisible(true);
         this.setContentPane(Fondo);
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         inicializar_Metodos();
     }
@@ -27,9 +29,9 @@ public class metods extends JFrame  {
         Botones();
     }
     private void Botones(){
-        Boton_D.setBounds(0,0,100,50);
-        Boton_R.setBounds(0,150,100,50);
-        Salir.setBounds(0, 784, 100, 50);
+        Boton_D.setBounds(0,0,100,100);
+        Boton_R.setBounds(0,150,100,100);
+        Salir.setBounds(320, 183, 100, 100);
         Fondo.add(Boton_D);
         Fondo.add(Boton_R);
         Fondo.add(Salir);
@@ -61,9 +63,9 @@ public class metods extends JFrame  {
         private Image Fondo_Pantalla;
 
         public Fondo_Panel() {
-            Fondo_Pantalla = new ImageIcon(getClass().getResource("/Hilos/casino.jpg")).getImage();
+            Fondo_Pantalla = new ImageIcon(getClass().getResource("/Hilos/images/universe-8622213_640.jpg")).getImage();
+            this.setLayout(null);
         }
-
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g); 

@@ -12,6 +12,7 @@ public class Ruleta extends JFrame {
     public Ruleta(){
         this.setBounds(0, 0, 800, 600);
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Metods_Ruleta();
     }
